@@ -19,8 +19,6 @@ var flagRender = 1;
 
 const styles = {
   chip: {
-    margin: 4,
-    marginRight: 10,
   },
 };
 
@@ -64,13 +62,12 @@ const stylePaperWall = {
 };
 
 const stylePaperWaller = {
-  margin: 3,
+  marginRight: 'auto',
+  marginLeft: 10,
   marginTop: 10,
-  marginBottom: 0,
-  padding: 35,
+  padding: 20,
   display: 'flex-box',
-  float: 'left',
-  textAlign: 'left',
+  textAlign: 'center',
   fontSize: 20,
 };
 
@@ -163,9 +160,8 @@ export default class ProtectedView extends React.Component {
                                     <div>
                                         {this.props.data.data[2][i][j].body}
                                     </div>
-                                    <div>
-                                        <Chip style={styles.chip}>
-                                            <Avatar size={32}>A</Avatar>
+                                    <div style={{textAlign: 'center'}}>
+                                        <Chip style={{margin: 'auto'}}>
                                             {this.props.data.data[2][i][j].userid}
                                         </Chip>
                                     </div>

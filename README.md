@@ -1,32 +1,20 @@
-# React-Redux-Flask #
+# EasyPost #
 
-Boilerplate application for a Flask JWT Backend and a React/Redux Front-End with Material UI.
+Microblogging Application that uses Flask-SQLAlchemy-ReactJS-MaterialUI
 
 * Python 2.7+ or 3.x
 * Pytest
-* Heroku
 * Flask
 * React
 * Redux
 * React-Router 2.0
 * React-Router-Redux
-* Babel 6
-* SCSS processing
-* Webpack
 
-![screenshot](http://i.imgur.com/ZIS4qkw.png)
+### Create Database
 
-### Create DB
 ```sh
-$ export DATABASE_URL="postgresql://localhost/yourdb"
-
-or
-
 $ export DATABASE_URL="mysql+mysqlconnector://localhost/yourdb"
 
-or
-
-$ export DATABASE_URL="sqlite:///your.db"
 
 $ python manage.py create_db
 $ python manage.py db upgrade
