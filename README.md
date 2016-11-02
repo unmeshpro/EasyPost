@@ -10,11 +10,19 @@ Microblogging Application that uses Flask-SQLAlchemy-ReactJS-MaterialUI
 * React-Router 2.0
 * React-Router-Redux
 
+
+### Screenshots
+Screen 1
 ![screenshot](http://i.imgur.com/FoVZ1jQ.png)
+Screen 2
 ![screenshot](http://i.imgur.com/NFuCbj3.png)
+Screen 3
 ![screenshot](http://i.imgur.com/7spm6jZ.png)
+Screen 4
 ![screenshot](http://i.imgur.com/2IQgXDx.png)
+Screen 5
 ![screenshot](http://i.imgur.com/I47X7C1.png)
+Screen 6
 ![screenshot](http://i.imgur.com/sBipDuL.png)
 
 
