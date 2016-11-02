@@ -10,6 +10,14 @@ Microblogging Application that uses Flask-SQLAlchemy-ReactJS-MaterialUI
 * React-Router 2.0
 * React-Router-Redux
 
+![screenshot](http://i.imgur.com/FoVZ1jQ.png)
+![screenshot](http://i.imgur.com/NFuCbj3.png)
+![screenshot](http://i.imgur.com/7spm6jZ.png)
+![screenshot](http://i.imgur.com/2IQgXDx.png)
+![screenshot](http://i.imgur.com/I47X7C1.png)
+![screenshot](http://i.imgur.com/sBipDuL.png)
+
+
 ### Create Database
 
 ```sh
