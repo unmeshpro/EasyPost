@@ -1,0 +1,127 @@
+FORMAT: 1A
+HOST: http://localhost:3000/
+
+# EasyPost API
+
+EasyPost API is a simple API allowing users to view the data pertaining to their posts.
+
+## Token of logged in user [/api/get_token]
+
+### Get the token of the current user [GET]
+
++ Request (application/json)
+
+        {
+            email: "unmesh.pro@gmail.com",
+            password: "password"
+        }
+
++ Response 200 (application/json)
+
+        {
+            token: "uniqueToken"
+        }
+
+
+## User token [/api/is_token_valid]
+
+### Check validity of user token [POST]
+
++ Request (application/json)
+
+        {
+            email: "unmesh.pro@gmail.com",
+            password: "password"
+        }
+
++ Response 200 (application/json)
+
+        {
+            token_is_valid: "True"
+        }
+
+
+## New user registration [/api/create_user]
+
+### Create a new user [POST]
+
++ Request (application/json)
+
+        {
+            email: "unmesh.pro@gmail.com",
+            password: "password",
+            nickname: "nickname",
+            aboutme: "aboutme"
+        }
+
++ Response 200 (application/json)
+
+        {
+            id: "newuserid",
+            token: "uniqueToken"
+        }
+        
+## New Post Creation [/api/create_post]
+
+### Create a new post for the current user [POST]
+
++ Request (application/json)
+
+        {
+            body: "post_body",
+            timestamp: "current_timestamp",
+            userid: "current_user_id"
+        }
+
++ Response 200 (application/json)
+
+        {
+            id: "postId",
+            body: "postBody"
+        }
+
+
+## Get information of all users [/api/info_of_users]
+
+### User Information [GET]
+
++ Request (application/json)
+
+        {
+            token: "currentUserToken"
+        }
+
++ Response 200 (application/json)
+        
+        [[{'aboutme': u'I love Music!!!!', 'email': u'unmesh.pro@gmail.com', 'nickname': u'unmeshpro', 'id': 1}, {'aboutme': u'This is great!!', 'email': u'sapnajec@gmail.com', 'nickname': u'sapnajec', 'id': 2}, {'aboutme': u'I play football!!', 'email': u'rajdeep.gupta@gmail.com', 'nickname': u'rajdeep', 'id': 3}], [{'followedid': 1, 'followerid': 2, 'id': None}, {'followedid': 3, 'followerid': 2, 'id': None}]]
+        
+
+## Get information of current user [/api/user]
+
+### Current User Information [GET]
+
++ Request (application/json)
+
+        {
+            token: "currentUserToken"
+        }
+
++ Response 200 (application/json)
+
+        [{'aboutme': u'This is great!!', 'email': u'sapnajec@gmail.com', 'nickname': u'sapnajec', 'id': 2}, [{'body': u'The climate is great! #awesome', 'timestamp': datetime.datetime(2016, 11, 3, 7, 35, 50), 'userid': u'sapnajec@gmail.com', 'id': 5}, {'body': u'This is my second post here!!', 'timestamp': datetime.datetime(2016, 11, 3, 7, 22, 2), 'userid': u'sapnajec@gmail.com', 'id': 4}, {'body': u'This is my first post here!!!', 'timestamp': datetime.datetime(2016, 11, 3, 5, 49, 59), 'userid': u'sapnajec@gmail.com', 'id': 2}], [[{'body': u'Unmesh', 'timestamp': datetime.datetime(2016, 11, 3, 7, 17, 1), 'userid': u'unmesh.pro@gmail.com', 'id': 3}, {'body': u'India is my country', 'timestamp': datetime.datetime(2016, 11, 3, 4, 56, 17), 'userid': u'unmesh.pro@gmail.com', 'id': 1}], []]]
+
+
+## Get information about relations [/api/get_follow_relations]
+
+### Current User's Follow Relations [GET]
+
++ Request (application/json)
+
+        {
+            token: "currentUserToken",
+            followerid: "currentuserid"
+        }
+
++ Response 200 (application/json)
+
+        [[{'aboutme': u'I love Music!!!!', 'email': u'unmesh.pro@gmail.com', 'nickname': u'unmeshpro', 'id': 1}, {'aboutme': u'This is great!!', 'email': u'sapnajec@gmail.com', 'nickname': u'sapnajec', 'id': 2}, {'aboutme': u'I play football!!', 'email': u'rajdeep.gupta@gmail.com', 'nickname': u'rajdeep', 'id': 3}], [{'followedid': 1, 'followerid': 2, 'id': None}, {'followedid': 3, 'followerid': 2, 'id': None}]]
